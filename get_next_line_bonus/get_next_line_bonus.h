@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpolojie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vpolojie <vpolojie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 20:42:21 by vpolojie          #+#    #+#             */
-/*   Updated: 2022/05/23 20:50:04 by vpolojie         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:22:42 by vpolojie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
 # include <unistd.h>
+# include <stdio.h>
+# include <limits.h>
 # include <stdlib.h>
 
 char	*get_next_line(int fd);
