@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vpolojie <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vpolojie <vpolojie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 20:45:56 by vpolojie          #+#    #+#             */
-/*   Updated: 2022/05/23 20:47:35 by vpolojie         ###   ########.fr       */
+/*   Updated: 2023/08/21 13:23:38 by vpolojie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -93,7 +95,7 @@ char	*get_next_line(int fd)
 	line = ft_calloc(line, 1, sizeof(char));
 	line = ft_strjoin(line, buffer);
 	while (ft_check(buffer) == 0 && rd > 0)
-	{0
+	{
 		rd = read(fd, buffer, BUFFER_SIZE);
 		if ((rd == -1) || (rd == 0 && line && line[0] == '\0'))
 		{
@@ -106,3 +108,4 @@ char	*get_next_line(int fd)
 	line = ft_cut_line(line, buffer, i);
 	return (line);
 }
+
